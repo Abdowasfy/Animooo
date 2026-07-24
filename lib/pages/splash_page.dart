@@ -1,4 +1,4 @@
-import 'package:animooo/styles/text_style.dart';
+import 'package:animooo/pages/views/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -13,16 +13,18 @@ class SplashPage extends StatefulWidget {
 
 class _SplashPageState extends State<SplashPage> {
   @override
-  
-void initState() {
-  super.initState();
+  void initState() {
+    super.initState();
 
-  Future.delayed(const Duration(seconds: 2), () {
-    if (!mounted) return;
+    Future.delayed(const Duration(seconds: 2), () {
+      if (!mounted) return;
 
-    Navigator.pushReplacementNamed(context, '/login');
-  });
-}
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => LoginScreen()),
+      );
+    });
+  }
 
   @override
   Widget build(BuildContext context) {

@@ -1,7 +1,7 @@
 import 'package:animooo/constans/app_colors.dart';
+import 'package:animooo/pages/views/otp_verfication_screen.dart';
 import 'package:animooo/pages/views/widget/custom_botton.dart';
 import 'package:animooo/pages/views/widget/custom_text_field.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
@@ -96,6 +96,12 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                 CustomButton(
                   text: "Send  Code",
                   onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => OtpVerificationScreen(),
+                      ),
+                    );
                     if (_formKey.currentState!.validate()) {
                       print(_emailController.text);
                     }

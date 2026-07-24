@@ -1,5 +1,7 @@
 import 'package:animooo/pages/splash_page.dart';
 import 'package:animooo/pages/views/login_screen.dart';
+import 'package:animooo/pages/views/new_password.dart';
+import 'package:animooo/pages/views/sign_up_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -17,12 +19,9 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
-        return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          home: child,
-        );
+        return MaterialApp(debugShowCheckedModeBanner: false, home: child);
       },
-      child: const LoginScreen(),
+      child: const SplashPage(),
     );
   }
 }

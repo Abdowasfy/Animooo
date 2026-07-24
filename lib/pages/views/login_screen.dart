@@ -1,5 +1,6 @@
 import 'package:animooo/constans/app_colors.dart';
 import 'package:animooo/pages/views/forget_password.dart';
+import 'package:animooo/pages/views/sign_up_screen.dart';
 import 'package:animooo/pages/views/widget/custom_botton.dart';
 import 'package:animooo/pages/views/widget/custom_text_field.dart';
 import 'package:animooo/styles/text_style.dart';
@@ -42,7 +43,6 @@ class _LoginScreenState extends State<LoginScreen> {
               children: [
                 Gap(20.h),
 
-                /// Logo
                 Container(
                   width: 200.w,
                   height: 100.h,
@@ -151,7 +151,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   },
                 ),
 
-                Gap(229.h),
+                Gap(210.h),
 
                 /// Bottom Text
                 Row(
@@ -162,7 +162,14 @@ class _LoginScreenState extends State<LoginScreen> {
                       style: TextStyle(fontSize: 14.sp),
                     ),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => SignUpScreen(),
+                          ),
+                        );
+                      },
                       child: Text(
                         "Sign Up now",
                         style: TextStyle(
