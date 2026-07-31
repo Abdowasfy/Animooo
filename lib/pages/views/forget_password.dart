@@ -96,14 +96,15 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                 CustomButton(
                   text: "Send  Code",
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => OtpVerificationScreen(),
-                      ),
-                    );
                     if (_formKey.currentState!.validate()) {
                       print(_emailController.text);
+
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const OtpVerificationScreen(),
+                        ),
+                      );
                     }
                   },
                 ),

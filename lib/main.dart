@@ -1,4 +1,5 @@
 import 'package:animooo/pages/splash_page.dart';
+import 'package:animooo/pages/splash_screen_tow.dart';
 import 'package:animooo/pages/views/login_screen.dart';
 import 'package:animooo/pages/views/new_password.dart';
 import 'package:animooo/pages/views/sign_up_screen.dart';

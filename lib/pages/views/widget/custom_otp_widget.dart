@@ -6,9 +6,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class CustomOtpWidget extends StatelessWidget {
   const CustomOtpWidget({
     super.key,
+    required this.controller,
+    required this.focusNode,
     this.onChanged,
   });
 
+  final TextEditingController controller;
+  final FocusNode focusNode;
   final ValueChanged<String>? onChanged;
 
   @override
@@ -17,6 +21,8 @@ class CustomOtpWidget extends StatelessWidget {
       height: 60.h,
       width: 55.w,
       child: TextFormField(
+        controller: controller,
+        focusNode: focusNode,
         onChanged: onChanged,
         keyboardType: TextInputType.number,
         textAlign: TextAlign.center,
@@ -29,6 +35,8 @@ class CustomOtpWidget extends StatelessWidget {
           FilteringTextInputFormatter.digitsOnly,
         ],
         decoration: InputDecoration(
+          filled: true,
+          fillColor: Colors.grey.shade100,
           contentPadding: EdgeInsets.zero,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(12.r),
